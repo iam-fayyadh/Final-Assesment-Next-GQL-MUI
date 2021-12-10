@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { withTranslation } from '@i18n';
 import { translation } from '@config';
 import cookies from 'js-cookie';
-import ViewLanguage from '@core_modules/setting/components/language/view';
+import ViewSwitcherLanguage from '@core_modules/setting/components/language/view';
 import { getStoreName } from '@core_modules/setting/services/graphql';
 
 const COOKIES_APP_LANG = 'app_lang';
@@ -101,7 +101,7 @@ const SwitcherLanguage = (props) => {
             handleClose,
             onClickLanguage,
         };
-        return <ViewLanguage {...props} {...propsOther} remoteLang={remoteLang} />;
+        return <ViewSwitcherLanguage {...props} {...propsOther} remoteLang={remoteLang} />;
     }
     return null;
 };

@@ -1,12 +1,6 @@
 {
     "compilerOptions": {
-        "lib": [
-            "dom",
-            "es2015",
-            "es2016",
-            "es6",
-            "es2017"
-        ],
+        "lib": ["dom", "es2015", "es2016", "es6", "es2017"],
         "target": "es2017",
         "module": "es6",
         "allowSyntheticDefaultImports": true,
@@ -17,7 +11,7 @@
             "@root/*": ["*"],
             "@core/*": ["src/*", "core/*"],
             "@core_minicart": ["src/modules/cart/plugins/mini", "core/modules/cart/plugins/mini"],
-            "@custom/*": ["src/custom/*"],         
+            "@custom/*": ["src/custom/*"],
             "@module_checkout/*": ["src/modules/checkout/*", "core/modules/checkout/*"],
 
             "@middlewares/*": ["src/middlewares/*", "core/middlewares/*"],
@@ -36,17 +30,17 @@
             "@lib_firebase/*": ["src/lib/firebase/*", "core/lib/firebase/*"],
             "@i18n": ["src/lib/i18n", "core/lib/i18n"],
 
-            "@layout" : ["src/modules/theme/layout", "core/modules/theme/layout"],
-            "@layout/*" : ["src/modules/theme/layout/*", "core/modules/theme/layout/*"],
-            "@layout_customer":["src/modules/customer/components/layout", "core/modules/customer/components/layout"],
-            "@layout_customer/*":["src/modules/customer/components/layout/*", "core/modules/customer/components/layout/*"],
+            "@layout": ["src/modules/theme/layout", "core/modules/theme/layout"],
+            "@layout/*": ["src/modules/theme/layout/*", "core/modules/theme/layout/*"],
+            "@layout_customer": ["src/modules/customer/components/layout", "core/modules/customer/components/layout"],
+            "@layout_customer/*": ["src/modules/customer/components/layout/*", "core/modules/customer/components/layout/*"],
 
-            "@theme/*":["src/theme/*", "core/theme/*"],
+            "@theme/*": ["src/theme/*", "core/theme/*"],
             "@theme_color": ["src/theme/colors", "core/theme/colors"],
             "@theme_mixins": ["src/theme/mixins", "core/theme/mixins"],
             "@theme_theme": ["src/theme/theme", "core/theme/theme"],
-            "@theme_typography":["src/theme/typography", "core/theme/typography"],
-            "@theme_vars":["src/theme/vars", "core/theme/vars"],
+            "@theme_typography": ["src/theme/typography", "core/theme/typography"],
+            "@theme_vars": ["src/theme/vars", "core/theme/vars"],
 
             "@helpers/*": ["src/helpers/*", "core/helpers/*"],
             "@helper_auth": ["src/helpers/auth", "core/helpers/auth"],
@@ -90,6 +84,7 @@
             "@common_select": ["src/modules/commons/Select", "core/modules/commons/Select"],
             "@common_textfield": ["src/modules/commons/TextField", "core/modules/commons/TextField"],
             "@common_carousel": ["src/modules/commons/carousel", "core/modules/commons/carousel"],
+            "@common_text": ["src/modules/commons/text", "core/modules/commons/text"],
 
             "@common_button/*": ["src/modules/commons/Button/*", "core/modules/commons/Button/*"],
             "@common_buttonqty/*": ["src/modules/commons/ButtonQty/*", "core/modules/commons/ButtonQty/*"],
@@ -110,7 +105,8 @@
             "@common_select/*": ["src/modules/commons/Select/*", "core/modules/commons/Select/*"],
             "@common_textfield/*": ["src/modules/commons/TextField/*", "core/modules/commons/TextField/*"],
             "@common_carousel/*": ["src/modules/commons/carousel/*", "core/modules/commons/carousel/*"],
-            
+            "@common_text/": ["src/modules/commons/text/", "core/modules/commons/text/"],
+
             "@common_image": ["src/modules/commons/Image", "core/modules/commons/Image"],
             "@common_image/*": ["src/modules/commons/Image/*", "core/modules/commons/Image/*"],
 
@@ -139,7 +135,10 @@
             "@common_restrictionPopup": ["src/modules/theme/components/restrictionPopup", "core/modules/theme/components/restrictionPopup"],
             "@common_currency": ["src/modules/setting/components/currency", "core/modules/setting/components/currency"],
             "@common_language": ["src/modules/setting/components/language", "core/modules/setting/components/language"],
-            "@common_bottomnavigation": ["src/modules/theme/components/bottom-navigation/mobile", "core/modules/theme/components/bottom-navigation/mobile"],
+            "@common_bottomnavigation": [
+                "src/modules/theme/components/bottom-navigation/mobile",
+                "core/modules/theme/components/bottom-navigation/mobile"
+            ],
             "@common_footer": ["src/modules/theme/components/footer/desktop", "core/modules/theme/components/footer/desktop"],
             "@common_productlabel": ["src/modules/commons/ProductLabel", "core/modules/commons/ProductLabel"],
             "@common_optionconfigurable": ["src/modules/commons/OptionConfigurable", "core/modules/commons/OptionConfigurable"],
@@ -154,7 +153,10 @@
             "@common_restrictionPopup/*": ["src/modules/theme/components/restrictionPopup/*", "core/modules/theme/components/restrictionPopup/*"],
             "@common_currency/*": ["src/modules/setting/components/currency/*", "core/modules/setting/components/currency/*"],
             "@common_language/*": ["src/modules/setting/components/language/*", "core/modules/setting/components/language/*"],
-            "@common_bottomnavigation/*": ["src/modules/theme/components/bottom-navigation/mobile/*", "core/modules/theme/components/bottom-navigation/mobile/*"],
+            "@common_bottomnavigation/*": [
+                "src/modules/theme/components/bottom-navigation/mobile/*",
+                "core/modules/theme/components/bottom-navigation/mobile/*"
+            ],
             "@common_footer/*": ["src/modules/theme/components/footer/desktop/*", "core/modules/theme/components/footer/desktop/*"],
             "@common_productlabel/*": ["src/modules/commons/ProductLabel/*", "core/modules/commons/ProductLabel/*"],
             "@common_optionconfigurable/*": ["src/modules/commons/OptionConfigurable/*", "core/modules/commons/OptionConfigurable/*"],
@@ -166,7 +168,6 @@
             "@plugin_minicart": ["src/modules/cart/plugins/mini", "core/modules/cart/plugins/mini"],
             "@plugin_minicart/*": ["src/modules/cart/plugins/mini/*", "core/modules/cart/plugins/mini/*"],
 
-            
             "@plugin_gimmickbanner": ["src/modules/cart/plugins/GimmickBanner", "core/modules/cart/plugins/GimmickBanner"],
             "@plugin_gimmickbanner/*": ["src/modules/cart/plugins/GimmickBanner/*", "core/modules/cart/plugins/GimmickBanner/*"],
 
@@ -175,7 +176,6 @@
             "@plugin_productitem": ["src/modules/catalog/plugins/ProductItem", "core/modules/catalog/plugins/ProductItem"],
             "@plugin_productitem/*": ["src/modules/catalog/plugins/ProductItem/*", "core/modules/catalog/plugins/ProductItem/*"],
 
-            
             "@plugin_paypalbutton": ["src/modules/paypal/plugins/PaypalButton", "core/modules/paypal/plugins/PaypalButton"],
             "@plugin_paypalbutton/*": ["src/modules/paypal/plugins/PaypalButton/*", "core/modules/paypal/plugins/PaypalButton/*"],
 
@@ -186,7 +186,10 @@
             "@plugin_otp": ["src/modules/login/plugins/otp", "core/modules/login/plugins/otp"],
             "@plugin_otp/*": ["src/modules/login/plugins/otp/*", "core/modules/login/plugins/otp/*"],
             "@plugin_notificationbell": ["src/modules/notification/plugins/NotificationBell", "core/modules/notification/plugins/NotificationBell"],
-            "@plugin_notificationbell/*": ["src/modules/notification/plugins/NotificationBell/*", "core/modules/notification/plugins/NotificationBell/*"],
+            "@plugin_notificationbell/*": [
+                "src/modules/notification/plugins/NotificationBell/*",
+                "core/modules/notification/plugins/NotificationBell/*"
+            ],
 
             "@plugin_optionitem": ["src/modules/product/plugins/OptionItem", "core/modules/product/plugins/OptionItem"],
             "@plugin_optionitem/*": ["src/modules/product/plugins/OptionItem/*", "core/modules/product/plugins/OptionItem/*"],
