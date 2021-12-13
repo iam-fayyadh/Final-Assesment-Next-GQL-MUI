@@ -19,10 +19,7 @@ export default makeStyles({
         marginBottom: 35,
         marginTop: 15,
     },
-    input: {
-        flex: 1,
-        display: 'flex',
-    },
+
     formSubs: {
         padding: 30,
         display: 'inline',
@@ -32,11 +29,7 @@ export default makeStyles({
         padding: 40,
         backgroundColor: 'black',
     },
-    btnSubs: {
-        marginTop: 20,
-        flex: 1,
-        backgroundColor: '#FFD700',
-    },
+
     typo: {
         fontWeight: 900,
         fontStyle: 'italic',

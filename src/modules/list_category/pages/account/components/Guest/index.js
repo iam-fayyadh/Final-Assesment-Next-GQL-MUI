@@ -13,21 +13,25 @@ import Input from '@material-ui/core/Input';
 
 import MuiAlert from '@material-ui/lab/Alert';
 import Snackbar from '@material-ui/core/Snackbar';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, makeStyles } from '@material-ui/core/styles';
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
+const style = makeStyles({
+    btn: { marginTop: 20, flex: 1, backgroundColor: '#FFD700' },
+    input: { flex: 1, display: 'flex' },
+});
+
 const WihtOut = (props) => {
     const styles = useStyles();
-    const { t, data } = props;
+    const { data } = props;
     const { data: categories } = getCategories();
     const [categoryList, setCategoryList] = useState(null);
     const [input, setInput] = useState('');
     const [toastSuccess, setToastSuccess] = useState(false);
     const [toastFailed, setToastFailed] = useState(false);
-
     useEffect(() => {
         setCategoryList(categories && categories.categoryList);
     }, [categories]);
@@ -79,11 +83,13 @@ const WihtOut = (props) => {
         },
     })(Typography);
 
+    const classes = style();
+
     return (
         <div className={styles.root}>
             <div className={styles.authBlock}>
                 <h1>Category List</h1>
-                <div className={styles.cardMap}>
+                <div>
                     <Grid container spacing={2}>
                         {categoryList
                             && categoryList.map(
@@ -101,26 +107,26 @@ const WihtOut = (props) => {
                     <h1>Subscribe To Our Newsletter</h1>
                     <Input
                         onKeyPress={handleEnter}
-                        className={styles.input}
+                        className={classes.input}
                         variant="outlined"
                         placeholder=" Your Email"
                         type="email"
                         value={input}
                         onChange={handleChange}
                     />
-                    <Button className={styles.btnSubs} onClick={() => handleSubmit(input)} size="medium">
+                    <Button className={classes.btn} onClick={() => handleSubmit(input)} size="medium">
                         Subscribe
                     </Button>
                 </form>
 
                 <Snackbar open={toastSuccess} autoHideDuration={6000} onClose={handleClose}>
                     <Alert onClose={handleClose} severity="success">
-                        {t('assesment:subscribe:success')}
+                        Thank you for subscribing us
                     </Alert>
                 </Snackbar>
                 <Snackbar open={toastFailed} autoHideDuration={6000} onClose={handleClose}>
                     <Alert onClose={handleClose} severity="error">
-                        {t('assesment:subscribe:failed')}
+                        You already subscribed us
                     </Alert>
                 </Snackbar>
             </div>
